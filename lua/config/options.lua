@@ -10,3 +10,4 @@ opt.colorcolumn = "120"
 opt.scrolloff = 20
 opt.shiftwidth = 4
 opt.tabstop = 4
+opt.spelllang = { "en", "pl" }
