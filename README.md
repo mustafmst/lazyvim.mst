@@ -8,5 +8,5 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 To install this LazyVim customized configuration simply run below command in Your terminal:
 
 ```bash
-
+wget https://raw.githubusercontent.com/mustafmst/lazyvim.mst/main/install.sh && cat install.sh cat install.sh | bash && rm install.sh
 ```
