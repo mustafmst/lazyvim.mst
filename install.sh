@@ -2,7 +2,7 @@
 
 echo "Installing LazyVim.mst config"
 
-[-f ~/.config/nvim ] && mv ~/.config/nvim ~/config/nvim.bak
+test -d ~/.config/nvim && mv ~/.config/nvim ~/config/nvim.bak
 
 mkdir -p ~/.config/nvim
 
