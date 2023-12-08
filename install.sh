@@ -2,12 +2,11 @@
 
 echo "Installing LazyVim.mst config"
 
-test -d ~/.config/nvim && mv ~/.config/nvim ~/config/nvim.bak
+test -d ~/.config/nvim && mv -f ~/.config/nvim ~/config/nvim.bak
 
-mkdir -p ~/.config/nvim
+test -d ~/.config/nvim && rm -rf ~/.config/nvim
 
-pushd ~/.config/nvim
+mkdir -p ~/.config
 
-git clone https://github.com/mustafmst/lazyvim.mst.git .
+git clone https://github.com/mustafmst/lazyvim.mst.git ~/.config/nvim
 
-popd
