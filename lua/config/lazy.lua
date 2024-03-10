@@ -13,7 +13,7 @@ require("lazy").setup({
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -42,5 +42,34 @@ require("lazy").setup({
         "zipPlugin",
       },
     },
+  },
+})
+
+vim.filetype.add({ extension = { templ = "templ" } })
+
+local lspconfig = require("lspconfig")
+
+lspconfig.templ.setup({})
+
+lspconfig.tailwindcss.setup({
+  filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+  init_options = { userLanguages = { templ = "html" } },
+})
+
+lspconfig.html.setup({
+  filetypes = { "html", "templ" },
+})
+
+lspconfig.htmx.setup({
+  filetypes = { "html", "templ" },
+})
+
+require("nvim-treesitter.configs").setup({
+  ensure_installed = { "templ" },
+  sync_install = false,
+  auto_install = true,
+  ignore_install = { "javascript" },
+  highlight = {
+    enable = true,
   },
 })
